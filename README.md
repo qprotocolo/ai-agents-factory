@@ -1,1 +1,3 @@
 Projeto de agentes de IA rodando em Qubes OS
+Produção completa de sistemas de lançamentos de softwares. Utilização de 
+Whonix com roteamento via Tor na construção de cada agente
