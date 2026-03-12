@@ -1,0 +1,10 @@
+{
+    "agent": "research",
+    "topic": "AI automation tools",
+    "timestamp": "2026-03-12T03:26:10.482276",
+    "sources": [
+        "example_source_1",
+        "example_source_2"
+    ],
+    "notes": "Dados iniciais coletados pelo agente de pesquisa."
+}

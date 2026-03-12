@@ -1,25 +1,36 @@
 # research.py
+
 """
-Research Agent - pesquisa dados online e salva resultados
+Research Agent
+Responsável por coletar dados iniciais para o pipeline.
 """
 
 import json
+from datetime import datetime
 
-# Função principal do agente
-def run_research():
-    # Simulando pesquisa de dados
-    data = {
-       "topic": "IA e automação",
-       "sources": ["https://example.com", "https://example2.com"],
-       "summary": "Dados de teste coletados pelo agente."
-   }
+def run_research(topic):
 
-   # Salvar resultado em arquivo JSON
-   with open("research_output.json", "w") as f:
-       json.dump(data, f, indent=4)
+    # Estrutura de dados produzida pelo agente
+    research_data = {
+        "agent": "research",
+        "topic": topic,
+        "timestamp": datetime.utcnow().isoformat(),
+        "sources": [
+            "example_source_1",
+            "example_source_2"
+        ],
+        "notes": "Dados iniciais coletados pelo agente de pesquisa."
+    }
 
-   print("Research Agent finalizado. Dados salvos em research_output.json")
+    # salvar arquivo de saída
+    with open("research_output.json", "w") as file:
+        json.dump(research_data, file, indent=4)
 
-# Rodar o agente
-if _name_=="_main_":
-  run_research()
+    print("Research Agent executado com sucesso.")
+    print("Arquivo research_output.json criado.")
+
+if __name__ == "__main__":
+
+    topic = input("Digite o tópico de pesquisa: ")
+
+    run_research(topic)
