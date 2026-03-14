@@ -8,7 +8,17 @@ Responsável por coletar dados iniciais para o pipeline.
 import json
 from datetime import datetime
 
-def run_research(topic):
+def run_research():
+    products = [
+        {"nicho": "fitness", "problema": "ebook", "promessa": "perder peso rápido", "formato": "pdf", "publico": "adultos 25-40"},
+        {"nicho": "estudo", "problema": "minicurso", "promessa": "melhorar notas rapidamente", "formato": "video", "publico": "universitarios"}
+    ]
+
+    output_path = "../../data_pipeline/research_output.json"
+    with open(output_path, "w") as f:
+        json.dump(products, f, indent=4)
+
+    print(Research Agent finalizado, arquivo criado em data_pipeline/research_output.json")
 
     # Estrutura de dados produzida pelo agente
     research_data = {
